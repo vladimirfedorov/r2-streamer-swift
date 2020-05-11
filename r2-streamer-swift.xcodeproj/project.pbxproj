@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		03C3CC6A222DBD9E00A01731 /* R2Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C3CC69222DBD9E00A01731 /* R2Shared.framework */; };
+		211975D224654DA9006113A9 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 211975D124654DA9006113A9 /* Config.xcconfig */; };
+		21D6CC18246468F2004CA38C /* libADEPT.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 21D6CC17246468F2004CA38C /* libADEPT.a */; };
+		21D6CC1A246468FB004CA38C /* libAdobe Content Filter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 21D6CC19246468FB004CA38C /* libAdobe Content Filter.a */; };
 		59501E201E2FB2AD00D1B4BF /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 59501E1F1E2FB2AD00D1B4BF /* libz.tbd */; };
 		CA130D44229D4245000A627C /* Seekable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA130D00229D4245000A627C /* Seekable.swift */; };
 		CA130D45229D4245000A627C /* FileInputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA130D01229D4245000A627C /* FileInputStream.swift */; };
@@ -69,6 +72,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		211975BD24654D59006113A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 211975B924654D59006113A9 /* Adobe Content Filter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5A5B8F981B9455A5002C53E9;
+			remoteInfo = "Adobe Content Filter";
+		};
+		211975CF24654D59006113A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 211975CB24654D59006113A9 /* ADEPT.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5A569A371B835925003B5B61;
+			remoteInfo = ADEPT;
+		};
+		2119763624654F33006113A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2119763124654F32006113A9 /* RDServices.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 118A0E281992B3FD00792DDE;
+			remoteInfo = RDServices;
+		};
 		CA130DA5229E7C83000A627C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 59501DC41E2FB0D700D1B4BF /* Project object */;
@@ -80,6 +104,12 @@
 
 /* Begin PBXFileReference section */
 		03C3CC69222DBD9E00A01731 /* R2Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = R2Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		211975B924654D59006113A9 /* Adobe Content Filter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Adobe Content Filter.xcodeproj"; path = "../adobe-content-filter/build/iOS/Adobe Content Filter.xcodeproj"; sourceTree = "<group>"; };
+		211975CB24654D59006113A9 /* ADEPT.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ADEPT.xcodeproj; path = "../adept-ios/ADEPT.xcodeproj"; sourceTree = "<group>"; };
+		211975D124654DA9006113A9 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		2119763124654F32006113A9 /* RDServices.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RDServices.xcodeproj; path = ../RDServices.xcodeproj; sourceTree = "<group>"; };
+		21D6CC17246468F2004CA38C /* libADEPT.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libADEPT.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		21D6CC19246468FB004CA38C /* libAdobe Content Filter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libAdobe Content Filter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		59501DCD1E2FB0D700D1B4BF /* R2Streamer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = R2Streamer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59501E1F1E2FB2AD00D1B4BF /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		CA130D00229D4245000A627C /* Seekable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Seekable.swift; sourceTree = "<group>"; };
@@ -149,7 +179,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA94291822BCE42500305CDB /* CoreServices.framework in Frameworks */,
+				21D6CC1A246468FB004CA38C /* libAdobe Content Filter.a in Frameworks */,
 				03C3CC6A222DBD9E00A01731 /* R2Shared.framework in Frameworks */,
+				21D6CC18246468F2004CA38C /* libADEPT.a in Frameworks */,
 				59501E201E2FB2AD00D1B4BF /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,9 +197,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		211975BA24654D59006113A9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				211975BE24654D59006113A9 /* libAdobe Content Filter.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		211975CC24654D59006113A9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				211975D024654D59006113A9 /* libADEPT.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2119763224654F32006113A9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2119763724654F33006113A9 /* libRDServices.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		59501DC31E2FB0D700D1B4BF = {
 			isa = PBXGroup;
 			children = (
+				211975D124654DA9006113A9 /* Config.xcconfig */,
+				211975B924654D59006113A9 /* Adobe Content Filter.xcodeproj */,
+				2119763124654F32006113A9 /* RDServices.xcodeproj */,
+				211975CB24654D59006113A9 /* ADEPT.xcodeproj */,
 				CA130CFE229D4245000A627C /* r2-streamer-swift */,
 				CA130DAC229E7CBE000A627C /* r2-streamer-swiftTests */,
 				59501DCE1E2FB0D700D1B4BF /* Products */,
@@ -187,6 +247,8 @@
 		59501E171E2FB1F500D1B4BF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				21D6CC19246468FB004CA38C /* libAdobe Content Filter.a */,
+				21D6CC17246468F2004CA38C /* libADEPT.a */,
 				CA94291722BCE42500305CDB /* CoreServices.framework */,
 				03C3CC69222DBD9E00A01731 /* R2Shared.framework */,
 				59501E1F1E2FB2AD00D1B4BF /* libz.tbd */,
@@ -465,7 +527,7 @@
 				TargetAttributes = {
 					59501DCC1E2FB0D700D1B4BF = {
 						CreatedOnToolsVersion = 8.2;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1140;
 						ProvisioningStyle = Manual;
 					};
 					CA130D9E229E7C83000A627C = {
@@ -486,6 +548,20 @@
 			mainGroup = 59501DC31E2FB0D700D1B4BF;
 			productRefGroup = 59501DCE1E2FB0D700D1B4BF /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 211975CC24654D59006113A9 /* Products */;
+					ProjectRef = 211975CB24654D59006113A9 /* ADEPT.xcodeproj */;
+				},
+				{
+					ProductGroup = 211975BA24654D59006113A9 /* Products */;
+					ProjectRef = 211975B924654D59006113A9 /* Adobe Content Filter.xcodeproj */;
+				},
+				{
+					ProductGroup = 2119763224654F32006113A9 /* Products */;
+					ProjectRef = 2119763124654F32006113A9 /* RDServices.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				59501DCC1E2FB0D700D1B4BF /* r2-streamer-swift */,
@@ -494,11 +570,36 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		211975BE24654D59006113A9 /* libAdobe Content Filter.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libAdobe Content Filter.a";
+			remoteRef = 211975BD24654D59006113A9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		211975D024654D59006113A9 /* libADEPT.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libADEPT.a;
+			remoteRef = 211975CF24654D59006113A9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2119763724654F33006113A9 /* libRDServices.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRDServices.a;
+			remoteRef = 2119763624654F33006113A9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		59501DCB1E2FB0D700D1B4BF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				211975D224654DA9006113A9 /* Config.xcconfig in Resources */,
 				CA130D7A229D42E2000A627C /* fonts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -715,6 +816,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_CODE_COVERAGE = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
@@ -726,7 +828,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
+				HEADER_SEARCH_PATHS = (
+					"$(SDKROOT)/usr/include/libxml2",
+					"\"$(SRCROOT)/readium-sdk/Platform/Apple/RDServices\"",
+					"\"$(SRCROOT)/readium-sdk/Platform/Apple/include\"",
+				);
 				INFOPLIST_FILE = "r2-streamer-swift/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -736,7 +842,10 @@
 				PRODUCT_NAME = R2Streamer;
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "r2-streamer-swift/r2-streamer-swift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../readium-sdk/Platform/Apple/include\" \"$(SRCROOT)/../readium-sdk/Platform/Apple/RDServices\"";
 			};
 			name = Debug;
 		};
@@ -745,6 +854,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_CODE_COVERAGE = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
@@ -757,7 +867,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
+				HEADER_SEARCH_PATHS = (
+					"$(SDKROOT)/usr/include/libxml2",
+					"\"$(SRCROOT)/readium-sdk/Platform/Apple/RDServices\"",
+					"\"$(SRCROOT)/readium-sdk/Platform/Apple/include\"",
+				);
 				INFOPLIST_FILE = "r2-streamer-swift/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -767,7 +881,9 @@
 				PRODUCT_NAME = R2Streamer;
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "r2-streamer-swift/r2-streamer-swift-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../readium-sdk/Platform/Apple/include\" \"$(SRCROOT)/../readium-sdk/Platform/Apple/RDServices\"";
 			};
 			name = Release;
 		};

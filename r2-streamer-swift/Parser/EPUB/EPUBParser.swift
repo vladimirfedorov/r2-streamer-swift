@@ -77,7 +77,8 @@ final public class EpubParser: PublicationParser {
         }
         
         // Check if the publication is DRM protected.
-        let drm = scanForDRM(in: container)
+//        let drm = scanForDRM(in: container)
+        let drm = DRM(brand: .lcp)
         // Parse the META-INF/Encryption.xml.
         parseEncryption(from: container, to: &publication, drm)
         

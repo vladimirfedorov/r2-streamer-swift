@@ -15,4 +15,6 @@
 #import <GCDWebServer/GCDWebServer.h>
 #import <GCDWebServer/GCDWebServerDataResponse.h>
 
+#import "Main/RDContainer.h"
+
 #endif /* R2Streamer_Bridging_Header_h */

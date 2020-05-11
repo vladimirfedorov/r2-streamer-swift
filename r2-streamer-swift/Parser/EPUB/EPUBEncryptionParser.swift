@@ -72,6 +72,9 @@ final class EPUBEncryptionParser: Loggable {
                 encryption.scheme = drm?.scheme.rawValue
             }
             // LCP END.
+            
+            // DEBUG: Need an appropriate value and scheme for ACS 
+            encryption.scheme = drm?.scheme.rawValue
 
             for encryptionProperty in encryptedDataElement.xpath("enc:EncryptionProperties/enc:EncryptionProperty") {
                 parseCompressionElement(from: encryptionProperty, to: &encryption)
